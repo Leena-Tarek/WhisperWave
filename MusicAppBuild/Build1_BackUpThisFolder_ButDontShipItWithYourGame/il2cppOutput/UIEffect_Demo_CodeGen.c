@@ -1,0 +1,95 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UIEffect_Demo_ColorControl_Start_m0DCBF845D7DBD3FA97A2CD6CA918F65E15909098 (void);
+extern void UIEffect_Demo_ColorControl_ChangeColor_m44ABAE046BBA21C76E466832D53E239AD4B1EC0D (void);
+extern void UIEffect_Demo_ColorControl__ctor_mF27D5CF8C41813562B710F4E7E25A3B7C07A0B6F (void);
+extern void ColorEvent__ctor_m5B80CF9B94A5A37152E873BB1EC9BC3184EA24E4 (void);
+extern void U3CU3Ec__DisplayClass3_0__ctor_m834AD65F0AEBB3BC40ADED5FF3E4E75A52F6C8BF (void);
+extern void U3CU3Ec__DisplayClass3_0_U3CStartU3Eb__0_m49D11687E61DD0C20E9BA844AE2E928D33C714B9 (void);
+extern void UIEffect_Demo_PropertyControl_ChangeValue_mF1C398A322CA9E69AAE4406102706A5A7780159B (void);
+extern void UIEffect_Demo_PropertyControl__ctor_m7FED47694AB235D885230A365EC5CA5F8C00F288 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m5CD55A069AEE7596DE9EE22B57E71D5DF5409A84 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m32CD603F927C6FA71BB62A242B8F3F1879BC58F5 (void);
+extern void UIEffect_Demo_Start_m5E897325FDB5AEC497260A72F9418874B31A427F (void);
+extern void UIEffect_Demo_SetTimeScale_m41F378BE83D9683433D00E24E7B3E9DD4D400DBE (void);
+extern void UIEffect_Demo_Open_m633C3E3B732A8F16910D1A29B8619A00E0748918 (void);
+extern void UIEffect_Demo_Close_m181A3100DC4E2F787713FA01FC084BD975D2A0CA (void);
+extern void UIEffect_Demo_Capture_m0663B7C657C684B2D2C9F0B5DE24CCB2028CBC5A (void);
+extern void UIEffect_Demo_SetCanvasOverlay_m3D01E1AE2D72E46A511AFBBE6407C219F94F5C2B (void);
+extern void UIEffect_Demo_SetRenderMode_m8128691EBD03CBC2A968BED9C0AFE063FABC34DD (void);
+extern void UIEffect_Demo__ctor_m0A6E6652681F8C97E543AF504F0A50BE34337795 (void);
+static Il2CppMethodPointer s_methodPointers[18] = 
+{
+	UIEffect_Demo_ColorControl_Start_m0DCBF845D7DBD3FA97A2CD6CA918F65E15909098,
+	UIEffect_Demo_ColorControl_ChangeColor_m44ABAE046BBA21C76E466832D53E239AD4B1EC0D,
+	UIEffect_Demo_ColorControl__ctor_mF27D5CF8C41813562B710F4E7E25A3B7C07A0B6F,
+	ColorEvent__ctor_m5B80CF9B94A5A37152E873BB1EC9BC3184EA24E4,
+	U3CU3Ec__DisplayClass3_0__ctor_m834AD65F0AEBB3BC40ADED5FF3E4E75A52F6C8BF,
+	U3CU3Ec__DisplayClass3_0_U3CStartU3Eb__0_m49D11687E61DD0C20E9BA844AE2E928D33C714B9,
+	UIEffect_Demo_PropertyControl_ChangeValue_mF1C398A322CA9E69AAE4406102706A5A7780159B,
+	UIEffect_Demo_PropertyControl__ctor_m7FED47694AB235D885230A365EC5CA5F8C00F288,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m5CD55A069AEE7596DE9EE22B57E71D5DF5409A84,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m32CD603F927C6FA71BB62A242B8F3F1879BC58F5,
+	UIEffect_Demo_Start_m5E897325FDB5AEC497260A72F9418874B31A427F,
+	UIEffect_Demo_SetTimeScale_m41F378BE83D9683433D00E24E7B3E9DD4D400DBE,
+	UIEffect_Demo_Open_m633C3E3B732A8F16910D1A29B8619A00E0748918,
+	UIEffect_Demo_Close_m181A3100DC4E2F787713FA01FC084BD975D2A0CA,
+	UIEffect_Demo_Capture_m0663B7C657C684B2D2C9F0B5DE24CCB2028CBC5A,
+	UIEffect_Demo_SetCanvasOverlay_m3D01E1AE2D72E46A511AFBBE6407C219F94F5C2B,
+	UIEffect_Demo_SetRenderMode_m8128691EBD03CBC2A968BED9C0AFE063FABC34DD,
+	UIEffect_Demo__ctor_m0A6E6652681F8C97E543AF504F0A50BE34337795,
+};
+static const int32_t s_InvokerIndices[18] = 
+{
+	7544,
+	3148,
+	7544,
+	7544,
+	7544,
+	6090,
+	6013,
+	7544,
+	13727,
+	7544,
+	7544,
+	6090,
+	6044,
+	6044,
+	6044,
+	5937,
+	6013,
+	7544,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UIEffect_Demo_CodeGenModule;
+const Il2CppCodeGenModule g_UIEffect_Demo_CodeGenModule = 
+{
+	"UIEffect_Demo.dll",
+	18,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
