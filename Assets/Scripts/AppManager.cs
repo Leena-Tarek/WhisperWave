@@ -17,6 +17,9 @@ public class AppManager : MonoBehaviour
     private AudioClip currentAppStatus;
     [SerializeField] public GameObject[] selectionIndicators;
     [HideInInspector] public int ambientButtonClicksCount, ASMRButtonClicksCount;
+
+
+    [HideInInspector] public int coins, xp, masteryLevel = 1,endCounter, miniGameScore,miniGameXP,currentXp;
     
     
     private void Awake() 
@@ -30,13 +33,20 @@ public class AppManager : MonoBehaviour
         else 
         { 
             Instance = this; 
-        } 
+        }
+        
+       
     }
     // Start is called before the first frame update
     void Start()
     {
-        SingularSDK.SetDeviceCustomUserId("CustomUserIdLEENAAA");
+        coins = PlayerPrefs.GetInt("coins",10000);
+        endCounter = PlayerPrefs.GetInt("endCounter",5);
+        masteryLevel = PlayerPrefs.GetInt("masteryLevel",1);
+        xp = PlayerPrefs.GetInt("xp",0);
+        currentXp = PlayerPrefs.GetInt("currentXP", 0);
         
+        SingularSDK.SetDeviceCustomUserId("CustomUserIdLEENAAA");
         Dictionary<string, object> attributes = new Dictionary<string, object>();
 
 // Add attributes
