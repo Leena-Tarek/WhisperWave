@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject StartPanel, ASMRPanel, AmbientPanel, EndPanel, InfoPanel, RewardsBtn, CounterPanel, MiniGameEnd,MiniGamePlay;
+    private GameObject StartPanel, ASMRPanel, AmbientPanel, EndPanel, InfoPanel, RewardsBtn, CounterPanel, MiniGameEnd,MiniGamePlay,TipPanel;
     [SerializeField] private TextMeshProUGUI coinsText, masteryLvlText, xpText,CounterText, miniGameScoreText,miniGameXPText;
     
     
@@ -74,6 +74,7 @@ public class UIManager : MonoBehaviour
             InfoPanel.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Enjoy Your Mix";
             AmbientPanel.SetActive(false);
             EndPanel.SetActive(true);
+            TipPanel.SetActive(false);
             EndPanel.transform.DOLocalMoveX(0, 0.5f).From(Screen.width*2);
             _appManager.buttonsPlayer.Stop();
             GameAnalytics.NewDesignEvent("Ambient_Clicks_Before_Moving", _appManager.ambientButtonClicksCount);
@@ -108,12 +109,22 @@ public class UIManager : MonoBehaviour
 
         if (!_appManager.isPlayingMix)
         {
-            _appManager.ASMRPlayer.clip = _appManager.currentASMR;
-            _appManager.AmbientPlayer.clip = _appManager.currentAmbient;
-            _appManager.ASMRPlayer.Play();
-            _appManager.AmbientPlayer.Play();
-            GameAnalytics.NewDesignEvent("PlayedMix:Sound-"+_appManager.currentASMR.name+":Ambient-"+_appManager.currentAmbient.name);
-            SingularSDK.Event("MixPlayed");
+            if (!_appManager.currentASMR || !_appManager.currentAmbient)
+            {
+                TipPanel.SetActive(true);
+                GameAnalytics.NewErrorEvent(GAErrorSeverity.Warning,"No Music Chosen");
+            }
+            else
+            {
+                _appManager.ASMRPlayer.clip = _appManager.currentASMR;
+                _appManager.AmbientPlayer.clip = _appManager.currentAmbient;
+                _appManager.ASMRPlayer.Play();
+                _appManager.AmbientPlayer.Play();
+                GameAnalytics.NewDesignEvent("PlayedMix:Sound-"+_appManager.currentASMR.name+":Ambient-"+_appManager.currentAmbient.name);
+                SingularSDK.Event("MixPlayed");
+            }
+               
+            
         }
         _appManager.isPlayingMix = !_appManager.isPlayingMix;
     }

@@ -40,6 +40,7 @@ public class AppManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //coins = 10000;
         coins = PlayerPrefs.GetInt("coins",10000);
         endCounter = PlayerPrefs.GetInt("endCounter",5);
         masteryLevel = PlayerPrefs.GetInt("masteryLevel",1);
@@ -56,6 +57,7 @@ public class AppManager : MonoBehaviour
 // Add more attributes as needed
 
         SingularSDK.Event(attributes, "OmarEventName");
+        Debug.Log("URL" + Application.absoluteURL);
     }
 
     // Update is called once per frame
